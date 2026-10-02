@@ -12,7 +12,11 @@
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 </head>
 <body class="customer-mode hologram-fluid-body">
-
+    <ul>
+        @foreach($pets as $pet)
+            <li>{{ $pet->name }} - {{ $pet->species }} - {{ $pet->age }} tuổi</li>
+        @endforeach
+    </ul>
     <!-- KHUNG THÔNG BÁO TOAST GÓC PHẢI -->
     <div id="toast-box" class="toast-container"></div>
 
